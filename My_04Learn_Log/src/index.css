@@ -1,3 +1,4 @@
+/* 设置基本样式 */
 * {
   box-sizing: border-box;
 }
@@ -5,67 +6,4 @@
 body {
   background-color: #DFDFDF;
   margin: 0;
-}
-
-/* 外层容器样式 */
-.Logs {
-  width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #EAE2B7;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
-}
-
-/* 设置item的样式 */
-.item {
-  display: flex;
-  margin: 16px 0;
-  padding: 6px;
-  background-color: #FCBF49;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
-}
-
-/* 设置日期 */
-.date {
-  width: 90px;
-  background-color: #fff;
-  border-radius: 10px;
-  font-weight: bold;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* 月份 */
-.month {
-  height: 30px;
-  line-height: 30px;
-  font-style: 20px;
-  color: #fff;
-  background-color: #D62828;
-}
-
-/* 日 */
-.day {
-  height: 60px;
-  line-height: 60px;
-  font-size: 50px;
-}
-
-/* 日志内容  */
-.content {
-  flex: auto;
-  text-align: center;
-}
-
-/* 描述内容 */
-.desc {
-  font-size: 16px;
-  color: #646434;
-}
-
-/* 学习时间 */
-.time{
-  color: #D62828;
 }
