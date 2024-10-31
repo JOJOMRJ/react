@@ -1,5 +1,6 @@
 import LogItems from "./LogItems/LogItems.js"
 import "./Logs.css"
+import Card from "../UI/Card/Card";
 // 日志的容器
 const Logs = () => {
   // 模拟一组从服务器中加载的数据
@@ -24,9 +25,10 @@ const Logs = () => {
     }
   ]
   return (
-    <div className="logs">
+    //   把className 传给Card
+    <Card className="logs">
       {logsData.map(item => <LogItems key={item.id} date={item.date} desc={item.desc} time={item.time}/>)}
-    </div>
+    </Card>
   )}
 
 export default Logs
