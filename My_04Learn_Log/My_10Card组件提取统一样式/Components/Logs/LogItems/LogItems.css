@@ -1,0 +1,8 @@
+/* 设置item的样式 */
+.item {
+  display: flex;
+  margin: 16px 0;
+  padding: 6px;
+  background-color: #FCBF49;
+
+}
