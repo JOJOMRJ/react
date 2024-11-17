@@ -25,7 +25,8 @@ const Logs = () => {
   ]
   return (
     <div className="logs">
-      {logsData.map(item => <LogItems key={item.id} date={item.date} desc={item.desc} time={item.time}/>)}
+      {/* {logsData.map(item => <LogItems key={item.id} date={item.date} desc={item.desc} time={item.time}/>)} */}
+      {logsData.map(item => <LogItems {...item}/>)}
     </div>
   )}
 

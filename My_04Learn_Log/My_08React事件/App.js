@@ -3,7 +3,7 @@ import React from 'react'
 function App() {
   const clickHandler = (event)=>{
     event.preventDefault() // 取消默认行文
-    event.stopPropagation()// 取消冒泡  事件冒泡是把事件传递给父元素 event.stopPropagation会阻止事件向父元素传递
+    event.stopPropagation()// 取消冒泡  事件冒泡是把事件传递给父元素 event.stopPropagation会阻止事件向父元素传递 （在子元素触发的回调函数里加）
     alert('我是clickHandler')
   }
   return (
