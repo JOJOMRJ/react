@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from "../UI/Card/Card";
 import './LogsForm.css'
-const LogsForm = () => {
+const LogsForm = (props) => {
     // 获取用户输入内容
     // 创建变量储存用户输入数据
     const [inputDate, setInputDate] = useState('')
@@ -11,32 +11,33 @@ const LogsForm = () => {
     // 创建一个响应函数，监听表单单项的变化
     const dateChangeHandler = (e) => {
         setInputDate(e.target.value)
-        console.log(e.target.value);
+        // console.log(e.target.value);
         
     }
 
     const descChangeHandler = (e) => {
         setInputDesc(e.target.value)
-        console.log(e.target.value);
+        // console.log(e.target.value);
         
     }
 
     const timeChangeHandler = (e) => {
         setInputTime(e.target.value)
-        console.log(e.target.value);
+        // console.log(e.target.value);
         
     }
 
     // 当用户提交时 汇总表单数据
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log('表单提交了');
+        // console.log('表单提交了');
         const newLog = {
             date: new Date(inputDate),
             desc: inputDesc,
             time: +inputTime
         }
-        console.log(newLog);
+        // 当添加新的日志时 调用函数把汇集后的表单数据传过去
+        props.onSaveLog(newLog)
         // 清空表单
         setInputDate('')
         setInputDesc('')
