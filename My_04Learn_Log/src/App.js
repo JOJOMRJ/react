@@ -32,11 +32,16 @@ const App = () => {
     newLog.id = Date.now()+""
     setLogsData([newLog, ...logsData])
   }
+
+  // 定义删除数据的函数
+  const delLogByIndex = (index) => {
+    setLogsData(prevState => prevState.filter((_, i) => i !== index));
+  }
   return <div className="app">
           {/*引入LogsForm*/}
           {/* 把存数据的函数传下去接收数据 */}
           <LogsForm onSaveLog={saveLogHandler}/>
-          <Logs logsData={logsData}/>
+          <Logs logsData={logsData} onDelLog={delLogByIndex}/>
          </div>
 }
 

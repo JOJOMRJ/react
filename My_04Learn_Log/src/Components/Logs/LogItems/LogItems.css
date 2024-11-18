@@ -6,3 +6,17 @@
   background-color: #FCBF49;
 
 }
+
+.delete {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+  transition:.3s;
+}
+
+.delete:hover {
+  color:#D62828;
+  /* transform: rotate(1turn); */
+}
