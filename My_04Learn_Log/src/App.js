@@ -1,5 +1,5 @@
 import Logs from "./Components/Logs/Logs"
-import LogsForm from "./Components/LogsForm/LogsForm";
+import LogsForm from "./Components/LogsForm/LogsForm"
 import './App.css'
 import { useState } from "react";
 
