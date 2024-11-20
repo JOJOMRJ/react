@@ -23,6 +23,12 @@ const App = () => {
       date: new Date(2021,2,21,11,30),
       desc: '学习Js',
       time:40
+    },
+    {
+      id:"004",
+      date: new Date(2022,2,21,11,30),
+      desc: '学习React',
+      time:40
     }
   ])
 
@@ -34,14 +40,14 @@ const App = () => {
   }
 
   // 定义删除数据的函数
-  const delLogByIndex = (index) => {
-    setLogsData(prevState => prevState.filter((_, i) => i !== index));
+  const delLogById = (id) => {
+    setLogsData(prevState => prevState.filter(log => log.id !== id));
   }
   return <div className="app">
           {/*引入LogsForm*/}
           {/* 把存数据的函数传下去接收数据 */}
           <LogsForm onSaveLog={saveLogHandler}/>
-          <Logs logsData={logsData} onDelLog={delLogByIndex}/>
+          <Logs logsData={logsData} onDelLog={delLogById}/>
          </div>
 }
 

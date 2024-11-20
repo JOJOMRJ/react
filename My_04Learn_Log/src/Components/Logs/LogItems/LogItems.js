@@ -29,6 +29,7 @@ function LogItems(props) {
   // 确认函数
   const okHandler = () => {
     props.onDelLog()
+    setshowConfirm(false)
   }
   return (
     <Card className='item'>
